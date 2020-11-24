@@ -1,0 +1,177 @@
+
+Online Application Title: BugTrackker Application
+Team:			Aman Gawande
+			Askhay Chaudhary
+			
+
+SRS Document:
+
+
+
+
+ER listing:
+
+
+
+Application Architecture:
+
+	Application = 
+			Logic 	+  data
+
+	Logic =(UI Logic  + Business Logic + DataAccess Logic) 
+	Data  =( structured data , Non Structured data)
+
+
+Online Application:
+
+	    Web based Application
+		    deployed on web and accessed by users from anywhere
+
+		    ShoppingApplication------Web portal-- used remotely by endusers,
+							                   vendors,
+								           employees
+
+Logic:
+     UI Logic:
+
+		 Web Pages +  HTML controls + Web Components (Angular)
+		 Navigation : (UI Routing) HTML Links, Routing mechansim
+		 Data Binding : DOM  + JSP tags (JSTL) + {{}} ngModel,
+		 
+		 Event Binding : 				action handlers
+					
+				 
+			HTTP Request:	GET:----------------Doget
+					POST:---------------Dopost
+					PUT:
+					DELETE:
+
+              Client Side UI----------------HTML, CSS, javaScript, bootstrap
+					        UI (Client Side UI Framework)
+						Angular, React, Vue,..........
+
+	Web Logic: ( Server Side processing)
+
+		Server UI---------------- JSP, servelet,  ( classical java web technology)
+				 spring MVC  ( to take advantage of MVC design Pattern using ready made frmwrk)
+						 Model, View, Controller
+						 Router
+						 (SOA  layer)
+						Spring Boot api
+						CRUD REST API
+						ORM Technique:Hibernate  ( ORM)
+						       ,JPA
+				         	JDBC  ( database Connectivity)
+		State management
+				
+		 	Client Side state management
+				cookies, querystring, form collection, hidden variables
+				 local storage, session storage, Web sql, 
+
+			Server Side state management
+				session, Cache,
+				database
+	Business Logic:
+		
+	
+		Java console application will be used to test your business Logic
+
+		Core Java:
+
+		will contain
+		 1.business query processing
+		 2.business operation managment
+		 3.Business data manipulation
+		
+	   from Bug-Tracker point of view
+
+		Modules
+                
+                 1.Project       :Project
+                                          create new project
+                                 :Project-Specs
+                                          select user
+                                          assign all user role
+                                          remove user
+                                 :Project-List
+                                          get all Projects
+                                          get by Category
+              
+                 2.Details       :get all assigned personell
+                                 :get all tickets                                 
+                 
+                 3.Ticket        :Ticket specs
+                                          edit,delete
+                                          all details
+                                          History
+                                          Comments
+                                          Attachment
+                                   :feilds
+                                          TitleID(pk),Title,Description,Assigned developer,submitter,Ticket Priority,Status,Type,Comment,History
+                          
+                4.Admin            :feilds
+                                           ID(pk),username,password,email,manage user role,manage project user,assign,comment,edit   
+ 
+                5.Manager          :feilds
+                                           ID(pk),username,password,email,assign
+                6.Developer        :feilds
+                                           ID(pk),username,password,role,email,tickets     
+                              
+                7.Submitter        :feilds
+                                           ID(pk),username,password,role,email,tickets
+              
+                8.claims           :feilds
+                                           ID(pk),login username,password,tickets points
+
+
+
+Data :
+		 Structured Data
+			 RDBMS
+				fields
+				tables
+				contstraints
+
+				Add some dummy records in your newly created database
+
+				write  reusable SQL queries against those database tables to check bussiness Queries
+				Test those SQL queries on existing dummy database you built
+
+			List of tables
+				 Admin   
+                                        Feilds:
+                                            ID(pk),username,password,email,manage user role,manage project user,assign,comment,edit
+                                 Manager
+                                        Feilds:
+                                            ID(pk),username,password,email,assign,tickets
+                                 Developer
+                                        Feilds:
+                                            ID(pk),username,password,role,email,tickets
+                                 Submitter
+                                        Feilds:
+                                           ID(pk),username,password,role,email,tickets
+                                 Project
+                                        Feilds:
+                                           ID(pk),Name,Description,Manage User,Details
+                                 Project Details
+                                        Feilds:
+                                           Assigned personell,Tickets
+                                 Assigned personell
+                                        Feilds:
+                                           ID(pk),Username,Email,Role
+                                 Tickets
+                                        Feilds:
+                                           TiketID(pk),Title,Description,Assigned developer,submitter,Created,More Details
+                                 Ticket Detail
+                                        Feilds:
+                                           Title,Description,Assigned developer,submitter,Created,Ticket Priority,Status,Type,Updated,Comment,History
+                                 Claims
+                                        Feilds:
+                                           ID(pk),username,password,ticket points
+
+
+			Create .sql file
+			  ddl.sql--->file will contain   DDL commands for Table creation
+			  dml.sql--->file will contain   insert commands for filling dummy data to tables which we have created
+			  bqyery.sql-->file will conatin   SQL queries mapped for business queries
+		
