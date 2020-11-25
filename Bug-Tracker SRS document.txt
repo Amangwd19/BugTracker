@@ -1,0 +1,193 @@
+Introduction
+
+Purpose:
+	The Bug-Tracker System is for Industrial Solutions to provide bugs/error Solution/Problem fixing that are occcured during development of a project 
+        as well through a single get way using the internet. It will enable team member to upload their bugs/error and let the other developers/members get          with to solve the bugs.Here's how team member can get their bugs fixed without much delay in project development. 
+
+Scope:
+        This system allows employees to solve bugs/error with lesser amount to wasting time for solution.
+        It encourages the various developers to arrive at problem solving.
+
+Definitions:
+	   OSS --> 	Bug-Tracker System
+	   SRS --> 	Software Requirement Specification
+	   GUI---> 	Graphical User Interface
+	   Portal-->    Personalized Website
+	   Stackholder--> The person who will participate in the System. And Onwer of system
+				Ex.   Adminstrator , Manager , Developer , Submitter
+	   UML--->	Software Engineering Notation for visualising System in the form diagrams
+ 	   SSL--->	Secure Socket Layer used for providing restricted access to application.
+	   BOD--->      Board Of Directors (Management).
+           RDBMS -->    Relational Dadabase Management System.
+	   CLUSTERS---> Group of independent servers.	
+
+Overview:
+	This System provides an easy solution to solve the bugs/error occured to developer during project development.       
+
+Additional Information:
+	The system work on internet server, so it will  be operated by any end user for the solving bugs/error with secure platform.
+        This system protects the integrity of the developers and submitter.
+        
+	
+General Description:
+        The Bug-Tracker application helps to manage the bugs/errors and keep track of it and also helps the developer in project development.
+        The Bug-Tracker system will use the internet as the sole method in bugs fixings to the team members.
+	
+	
+Functional Requirement:
+	This section provides requirement overview of the system. Various functional modules that can be implemented by 
+	the system will be-
+	
+	Description:
+        Registration of the team member who wants to fix his/her bugs/errors must be registered, Unregistered user cannot get to the system.
+        Login user logins to the system to upload the bugs/errors by entering valid user id and password.
+        Users get to see the assigned members to project and points the earned in fixing bugs/errors.
+        With Each Bugs/Errors fixed will get notified to the respected user through email.         
+        The term client/server refers primarily to an architecture or logical division of responsibilities, 
+        the client is the application (also known as the front-end), and the server is the RDBMS (also known as the back-end).
+        A client/server system is a distributed system in which,Some sites are client sites and others are server sites.
+        All the data resides at the server sites.
+        All applications execute at the client sites.
+        
+
+Technical Issues:
+	This system will work on client-Server architecture. It will require an internet server.
+	The system should support some commonly used browser such as Chrome etc.
+	Interface Requirement Various interfaces for the Tickets could be 
+	1.Login Page, 
+	2.Registration form
+    
+	There will be a screen displaying information about bugs/errors in project.
+
+	The user may select the different options which will be open in another screen as
+		1.Login Page
+		2.Registration Form
+		3.Project Page
+                4.Porject Details
+		4.Ticket Page 
+                5.Ticket Details
+                6.Ticket history
+                
+                
+	
+ Hardware Interface:
+	The System must run over the internet,
+        All the hardware shall require to connect to internet will be hardware interface for the system.
+		e.g. modem,  WAN, LAN
+		Specialized Server Infrastructure Hardware
+        The system should use distrubuted servers i.e cloud for managing large amount of data so as to make it appear as single unit for end-user.
+        The system should have proper clusters for backup.
+		
+ Software Interface:
+	The system is on server so it requires the any scripting language like JSP or  PHP or ASP, ETC.
+        The system should be able to exchange data using XML, JASON or any advance technology.
+	The system require DataBase also for the store the any transaction of the system like MySql or oracle, or SQL server etc.
+	System also require DNS (Domain Name space) for the naming on the internet.
+	http://www.transflower.in
+	http://www.amazon.in
+        At the end-user need web browser for interact with the system.
+
+
+Performance Requirement:
+	There is no  performance requirement in this system, because the server request  and respone to client is totally based on internet connection of enduser.
+
+Design Constrains:
+	This system should be developed using  Standard Web Page Development Tool , which conforms GUI standards such like HTML, XML, JSON,etc.
+        The system should support various RDMS and Cloud Technologies.
+
+
+Non-Functional Requirements
+
+1.Security:
+	  SSL
+	The System use SSL (Secure Socket Layer) in all trancations that include any confidential customer information.
+	The system must automcatically log out all customers after a period of inactivity.
+	The system should not leave any cookies on the customer's computer containing users's password.
+	The system's back-end servers shall  only be accessible to authenticated administrators.
+	Sensitive data will be encrypted  before being sent onver insecure connections like internet.
+        The proper firewalls should be developed to avoid intrusions from the internal or external sources.
+
+
+2.Reliability:
+	The system provides storage of all databases on redundant computers with  automatic switchover. 
+	The main pillar of reliability of the system  is the backup of the database 
+	which is conitinously maintained and update to reflect  the most recenet changes.
+
+
+3: Availability:
+	The system should be available at all times.meaning the user can access it using web browser, 
+        only restricted by the down time of the server on which the system runs.
+        In case of a of a hardware failure or database corruption, a replacement page will be shown. 
+	uptime : It mean 24 * 7 availability
+	100%--------------
+	99.9%
+	99.999%
+	99.9999%
+
+
+4: Maintainability:
+	A commercial database is used for maintaining the databae and application server takes care of the site. 
+	The maintainability can be done efficiently.
+
+5.Portability:
+	The application is HTML and scripting language based (Javascript). So the end user part is fully portable and any system using 
+	any web browser should be able to use the features of the system,including any hardware platform that is available 
+	or will be available in the futuer. 
+	An end-user  is used this system on an OS;either it is Windows or Linux.
+	The System shall run on PC, Laptops and PDA.etc.
+	The  technology should be transferable to different environments easily.
+
+6.Accessibility:
+        Only registered users should be allowed to process the orders after authentications.
+        Only GUI access of the system should be permited to end users.
+
+7.Policies:
+       The system should adhere to all the legal formalities of the particular countries.
+       The system should maintain security related to sensitive data.
+
+8.Efficiency:
+	The system should provide good throughput and response to multiple users without burdening the system by using appropriate number of servers.
+
+9.Safety:
+      Software should not harm ethical and environmental conditions of the end users machine.
+
+10.Modulariy:
+      The system should have user friendly interface. 
+      It should be easily updated,modified and reused. 
+
+
+Operational Scenario:
+        User Interaction
+        The User want to upload the bugs/errors. The system shows all type of error resolved before and if its a new bug/error he can uplaod and let other         developers of industry resolve it.User can see the related projects and relative solutions to his/her bug/error during project development.
+ 
+
+	Manager Interaction:
+        Manager get to see all the Project Details. Assign the role to team member of frontend developer or backend developer.
+        Create a Ticket for new bugs/errors.
+	
+	Developer Interaction:
+	They get access to existing or new tickets in the system. They could provide the solution to bugs/errors .
+	 
+	
+Preliminary Schedule: :
+
+	
+	1.Login
+	2.Manage Project database Browse category
+	3.edit or remove ticket
+	4.Manage Ticket database
+	5.update Ticket category
+	6.Logout
+	7.Give feedback
+	8.View Ticket details
+	9.Visit Site
+	10.Create new user
+	11.View Project details
+	12.Cancel ticket after resolved
+	13.Registration
+	14.Ticket tracking
+	15.Claim Tickets
+	16.User Support
+        
+        
+

@@ -1,0 +1,181 @@
+
+Online Application Title: BugTracker Application
+Team:			Aman Gawande
+			Askhay Chaudhary
+
+
+
+Application Architecture:
+
+	Application = 
+			Logic 	+  data
+
+	Logic =(UI Logic  + Business Logic + DataAccess Logic) 
+	Data  =( structured data , Non Structured data)
+
+
+Online Application:
+
+	    Web based Application
+		    deployed on web and accessed by users from anywhere
+
+		    BugTrackerApplication------Web portal-- used remotely by Submitters,
+							                   Developers,
+								           Managers.
+
+Logic:
+     UI Logic:
+
+		 Web Pages +  HTML controls + Web Components (Angular)
+		 Navigation : (UI Routing) HTML Links, Routing mechansim
+		 Data Binding : DOM  + JSP tags (JSTL) + {{}} ngModel,
+		 
+		 Event Binding : 				action handlers
+					
+				 
+			HTTP Request:	GET:----------------Doget
+					POST:---------------Dopost
+					PUT:
+					DELETE:
+
+              Client Side UI----------------HTML, CSS, javaScript, bootstrap
+					        UI (Client Side UI Framework)
+						Angular, React, Vue,..........
+
+	Web Logic: ( Server Side processing)
+
+		Server UI---------------- JSP, servelet,  ( classical java web technology)
+				 spring MVC  ( to take advantage of MVC design Pattern using ready made frmwrk)
+						 Model, View, Controller
+						 Router
+						 (SOA  layer)
+						Spring Boot api
+						CRUD REST API
+						ORM Technique:Hibernate  ( ORM)
+						       ,JPA
+				         	JDBC  ( database Connectivity)
+		State management
+				
+		 	Client Side state management
+				cookies, querystring, form collection, hidden variables
+				 local storage, session storage, Web sql, 
+
+			Server Side state management
+				session, Cache,
+				database
+	Business Logic:
+		
+	
+		Java console application will be used to test your business Logic
+
+		Core Java:
+
+		will contain
+		 1.business query processing
+		 2.business operation managment
+		 3.Business data manipulation
+		
+	   from Bug-Tracker point of view
+
+		Modules
+                
+                 1.Project       :Project
+                                          create new project
+                                 :Project-Specs
+                                          select user
+                                          assign all user role
+                                          remove user
+                                 :Project-List
+                                          get all Projects
+                                          get by Category
+              
+                 2.Details       :get all assigned personell
+                                 :get all tickets                                 
+                 
+                 3.Ticket        :Ticket specs
+                                          edit,delete
+                                          all details
+                                          History
+                                          Comments
+                                          Attachment
+                                   :feilds
+                                          TitleID(pk),Title,Description,Assigned developer,submitter,Ticket Priority,Status,Type,Comment,History
+                  4.Admin   
+                                    Feilds:
+                                            new,AiD(pk),username,password 
+                  5.Manager
+                                    Feilds:
+                                            new,MiD(pk),username,password,email,assign,tickets
+                  6.Developer
+                                        Feilds:
+                                            new,DiD(pk),username,password,role,email,tickets
+                  7.Submitter
+                                        Feilds:
+                                           new,SiD(pk),username,password,role,email,tickets
+                  8.Project
+                                        Feilds:
+                                           new,PiD(pk),Name,MiD(FK),DiD(FK),SiD(FK),Description,Tickets
+                                  
+                  9.Tickets
+                                        Feilds:
+                                           new,TiketID(pk),Title,Description,DiD(FK),SiD(FK),Mid(FK),Pi(FK),
+                                           Created,Status,Type,Updated,Comment,History,BiD(FK)
+                                 
+                  10. Bugs
+                                        Feilds:
+                                           new,BiD(PK),Type,Created,Status,Type,Updated                               
+ 
+                  11. Claims
+                                         Feilds:
+                                           ID(pk),username,password,ticket points        
+                
+
+
+Data :
+		 Structured Data
+			 RDBMS
+				fields
+				tables
+				contstraints
+
+				Add some dummy records in your newly created database
+
+				write  reusable SQL queries against those database tables to check bussiness Queries
+				Test those SQL queries on existing dummy database you built
+
+			List of tables
+				 Admin   
+                                        Feilds:
+                                            new,AiD(pk),username,password 
+                                 Manager
+                                        Feilds:
+                                            new,MiD(pk),username,password,email,assign,tickets
+                                 Developer
+                                        Feilds:
+                                            new,DiD(pk),username,password,role,email,tickets
+                                 Submitter
+                                        Feilds:
+                                           new,SiD(pk),username,password,role,email,tickets
+                                 Project
+                                        Feilds:
+                                           new,PiD(pk),Name,MiD(FK),DiD(FK),SiD(FK),Description,Tickets
+                                  
+                                 Tickets
+                                        Feilds:
+                                           new,TiketID(pk),Title,Description,DiD(FK),SiD(FK),Mid(FK),Pi(FK),
+                                           Created,Status,Type,Updated,Comment,History,BiD(FK)
+                                 
+                                 Bugs
+                                       Feilds:
+                                           new,BiD(PK),Type,Created,Status,Type,Updated                               
+ 
+                                  Claims
+                                        Feilds:
+                                           ID(pk),username,password,ticket points
+
+
+			Create .sql file
+			  ddl.sql--->file will contain   DDL commands for Table creation
+			  dml.sql--->file will contain   insert commands for filling dummy data to tables which we have created
+			  bqyery.sql-->file will conatin   SQL queries mapped for business queries
+		
