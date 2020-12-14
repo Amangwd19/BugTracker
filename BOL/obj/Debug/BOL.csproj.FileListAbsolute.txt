@@ -1,0 +1,5 @@
+C:\Users\91726\source\repos\IACSDBugTracker\BOL\bin\Debug\BOL.dll
+C:\Users\91726\source\repos\IACSDBugTracker\BOL\bin\Debug\BOL.pdb
+C:\Users\91726\source\repos\IACSDBugTracker\BOL\obj\Debug\BOL.csproj.CoreCompileInputs.cache
+C:\Users\91726\source\repos\IACSDBugTracker\BOL\obj\Debug\BOL.dll
+C:\Users\91726\source\repos\IACSDBugTracker\BOL\obj\Debug\BOL.pdb
